@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
-import { FAB, Icon } from "react-native-elements";
+import { FAB, Icon, Input } from "react-native-elements";
 import {
   readAsStringAsync,
   writeAsStringAsync,
@@ -8,9 +8,8 @@ import {
   makeDirectoryAsync,
   getInfoAsync,
 } from "expo-file-system";
-import { Asset, useAssets, AssetMetadata } from "expo-asset";
-import { Input } from "react-native-elements";
 import data from "../json/cigarretes.json";
+import { images } from "../Images";
 export const readCigarretes = async (setStore, store) => {
   const folder = documentDirectory + "cigarretes/";
   const dirInfo = await getInfoAsync(folder);
@@ -20,7 +19,6 @@ export const readCigarretes = async (setStore, store) => {
     const fileInfo = await getInfoAsync(folder + "cigarretes.json");
     if (fileInfo.exists && fileInfo.size !== 0) {
       const list = await readAsStringAsync(folder + "/cigarretes.json");
-
       await setStore([...JSON.parse(list)]);
     } else {
       await writeAsStringAsync(
@@ -37,6 +35,8 @@ export const AdminScreen = (props) => {
   const [cigarretesToShow, setCigarretesToShow] = React.useState([]);
   React.useEffect(() => {
     readCigarretes(setCigarretesList, cigarretesList);
+  }, []);
+  React.useEffect(() => {
     setCigarretesToShow(
       cigarretesList.map((actualCigarrete) => {
         return (
@@ -59,7 +59,7 @@ export const AdminScreen = (props) => {
         );
       })
     );
-  }, []);
+  }, [cigarretesList]);
   const submitHandler = async () => {
     const folder = cacheDirectory + "cigarretes/";
     const dirInfo = await getInfoAsync(folder);
@@ -73,11 +73,10 @@ export const AdminScreen = (props) => {
       props.navigation.navigate("CigarretesScreen");
     }
   };
-
   return (
     <View>
-      <ScrollView>{cigarretesToShow}</ScrollView>
       <FAB icon={<Icon type="antdesign" name="check" color="red" />} />
+      <ScrollView>{cigarretesToShow}</ScrollView>
     </View>
   );
 };
@@ -85,7 +84,7 @@ export const AdminScreen = (props) => {
 const CigarreteChart = (props) => {
   return (
     <View>
-      <Image source={{ uri: "../assets/IMG/" + props.photo }} />
+      <Image source={images.images[props.photo]} />
       <Text>{props.name}</Text>
       <Input
         keyboardType="decimal-pad"

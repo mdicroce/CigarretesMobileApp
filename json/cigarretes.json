@@ -1,42 +1,42 @@
 [
     {
-        "name": "Malboro común 20",
-        "photo": "malboro-comun.jpg",
+        "name": "Marlboro común 20",
+        "photo": "marlboro-comun.jpg",
         "price": 225
     },
     {
-        "name": "Malboro Box 20",
-        "photo": "malboro-box.jpg",
+        "name": "Marlboro Box 20",
+        "photo": "marlboro-box.jpg",
         "price": 250
     },
     {
-        "name": "Malboro Box 10",
-        "photo": "malboro-10.jpg",
+        "name": "Marlboro Box 10",
+        "photo": "marlboro-10.jpg",
         "price": 130
     },
     {
-        "name": "Malboro Box 10 Convertible",
-        "photo": "malboro-fusion-de-10.jpg",
+        "name": "Marlboro Box 10 Convertible",
+        "photo": "marlboro-fusion-de-10.jpg",
         "price": 130
     },
     {
-        "name":"Malboro Box 20 Mentolado",
-        "photo": "malboro-ice-blast.jpg",
+        "name":"Marlboro Box 20 Mentolado",
+        "photo": "marlboro-ice-blast.jpg",
         "price": 240
     },
     {
-        "name":"Malboro Box 20 Fusión",
-        "photo":"malboro-fusion.jpg",
+        "name":"Marlboro Box 20 Fusión",
+        "photo":"marlboro-fusion.jpg",
         "price": 240
     },
     {
-        "name":"Malboro Box 20 fusion summer",
-        "photo":"malboro-fusion-summer.jpg",
+        "name":"Marlboro Box 20 fusion summer",
+        "photo":"marlboro-fusion-summer.jpg",
         "price":240
     },
     {
-        "name":"Malboro Gold",
-        "photo":"malboro-gold.jpg",
+        "name":"Marlboro Gold",
+        "photo":"marlboro-gold.jpg",
         "price":250
     },
     {
