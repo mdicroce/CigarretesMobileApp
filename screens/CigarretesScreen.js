@@ -5,30 +5,36 @@ import { readCigarretes } from "./Admin";
 import { images } from "../Images";
 import { Button } from "react-native-elements/dist/buttons/Button";
 
+async function setCuantity(listOfCigarretes, setListWithCantity) {
+  await setListWithCantity(
+    listOfCigarretes.map((actualCigarrete) => {
+      return { ...actualCigarrete, cuantity: 0 };
+    })
+  );
+}
+
 export const CigarretesScreen = (props) => {
   const [listOfCigarretes, setListOfCigarretes] = React.useState([]);
+  const [listWithCuantity, setListWithCuantity] = React.useState([]);
   const [showListOfCigarretes, setShowListOfCigarretes] = React.useState([]);
 
   React.useEffect(() => {
-    readCigarretes(setListOfCigarretes, listOfCigarretes).then((response) => {
-      setListOfCigarretes(
-        listOfCigarretes.map((actualCigarrete) => {
-          return { ...actualCigarrete, cuantity: 0 };
-        })
-      );
-    });
+    readCigarretes(setListOfCigarretes, listOfCigarretes);
   }, []);
   React.useEffect(() => {
+    setCuantity(listOfCigarretes, setListWithCuantity);
+  }, [listOfCigarretes]);
+  React.useEffect(() => {
     setShowListOfCigarretes(
-      listOfCigarretes.map((actualCigarrete) => {
+      listWithCuantity.map((actualCigarrete) => {
         return (
           <CigarreteToShow
             key={actualCigarrete.name}
             photo={actualCigarrete.photo}
             name={actualCigarrete.name}
             onPressHandler={(plus) => {
-              setListOfCigarretes(
-                listOfCigarretes.map((aCigarrete) => {
+              listWithCuantity(
+                listWithCuantity.map((aCigarrete) => {
                   if (aCigarrete.name === actualCigarrete.name) {
                     return {
                       ...aCigarrete,
@@ -44,39 +50,31 @@ export const CigarretesScreen = (props) => {
         );
       })
     );
-  }, [listOfCigarretes]);
+  }, [listWithCuantity]);
   return (
     <View>
-      <ShowTotal cigarretesList={listOfCigarretes} />
-      {/* <ScrollView>{showListOfCigarretes}</ScrollView> */}
+      <ShowTotal cigarretesList={listWithCuantity} />
+      <ScrollView>{showListOfCigarretes}</ScrollView>
     </View>
   );
 };
 
-const ShowTotal = (props) => {
-  console.log(props.cigarretesList);
-  const total = props.cigarretesList.reduce(
-    (previus, current) => {
-      return (previus += current.price * current.cuantity);
-    },
-    [0]
-  );
+const ShowTotal = ({ cigarretesList }) => {
+  let total = 0;
+  if (Array.isArray(cigarretesList) && cigarretesList.length > 0) {
+    cigarretesList.forEach((actualCigarrete) => {
+      total += actualCigarrete.cuantity * actualCigarrete.price;
+    });
+  }
+
   return (
     <View>
-      {/* <FAB
+      <FAB
         title="Ver Total"
         onPress={() => {
-          console.log("hola");
+          Alert.alert("Total", `El total de cigarros es ${total}$`);
         }}
-      /> */}
-      <Button
-        onPress={() => {
-          console.log("hola");
-        }}
-        title="hola"
-      >
-        hola
-      </Button>
+      />
     </View>
   );
 };
