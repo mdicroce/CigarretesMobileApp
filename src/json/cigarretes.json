@@ -1,0 +1,158 @@
+[
+  {
+    "name": "Marlboro común 20",
+    "photo": "marlboro-comun.jpg",
+    "price": 225
+  },
+  {
+    "name": "Marlboro Box 20",
+    "photo": "marlboro-box.jpg",
+    "price": 250
+  },
+  {
+    "name": "Marlboro Box 10",
+    "photo": "marlboro-10.jpg",
+    "price": 130
+  },
+  {
+    "name": "Marlboro Box 10 Convertible",
+    "photo": "marlboro-fusion-de-10.jpg",
+    "price": 130
+  },
+  {
+    "name": "Marlboro Box 20 Mentolado",
+    "photo": "marlboro-ice-blast.jpg",
+    "price": 240
+  },
+  {
+    "name": "Marlboro Box 20 Fusión",
+    "photo": "marlboro-fusion.jpg",
+    "price": 240
+  },
+  {
+    "name": "Marlboro Box 20 fusion summer",
+    "photo": "marlboro-fusion-summer.jpg",
+    "price": 240
+  },
+  {
+    "name": "Marlboro Gold",
+    "photo": "marlboro-gold.jpg",
+    "price": 250
+  },
+  {
+    "name": "Philip-Morris Común 20",
+    "photo": "philip-morris-clasico-comun-x-20.jpg",
+    "price": 205
+  },
+  {
+    "name": "Philip-Morris Box 20",
+    "photo": "philip-morris-clasico-box-20.jpg",
+    "price": 225
+  },
+  {
+    "name": "Philip-Morris Box 10",
+    "photo": "philip-morris-clasico-box-10.jpg",
+    "price": 120
+  },
+  {
+    "name": "Philip-Morris Caps 20 box",
+    "photo": "philip-morris-convertible-box-20.jpg",
+    "price": 220
+  },
+  {
+    "name": "Philip-Morris Caps 10 box",
+    "photo": "philip-morris-convertible-10.jpg",
+    "price": 120
+  },
+  {
+    "name": "Chesterfield Común 20",
+    "photo": "chester-comun-20.jpg",
+    "price": 175
+  },
+  {
+    "name": "Chesterfield Box 20",
+    "photo": "chester-box-20.jpg",
+    "price": 205
+  },
+  {
+    "name": "Chesterfield común 10",
+    "photo": "chester-box-10.jpg",
+    "price": 100
+  },
+  {
+    "name": "Chesterfield Convertible Box 20",
+    "photo": "chester-convertible-20.jpg",
+    "price": 205
+  },
+  {
+    "name": "Chesterfield Convertible Fusion Box 20",
+    "photo": "chester-convertible-uva-20.jpg",
+    "price": 205
+  },
+  {
+    "name": "Chesterfield Convertible Box 10",
+    "photo": "chester-convertible-10.jpg",
+    "price": 100
+  },
+  {
+    "name": "L & M Común Rojo",
+    "photo": "lm-rojo-20.jpg",
+    "price": 165
+  },
+  {
+    "name": "L & M Comùn Azul",
+    "photo": "lm-azul-20.jpg",
+    "price": 165
+  },
+  {
+    "name": "Parliament",
+    "photo": "parliament-20.jpg",
+    "price": 275
+  },
+  {
+    "name": "Virginia Super Slim 100s",
+    "photo": "virginia-s-supers-lims-box-20.jpg",
+    "price": 275
+  },
+  {
+    "name": "Harmony Dorado",
+    "photo": "harmony-dorado-20.jpg",
+    "price": 200
+  },
+  {
+    "name": "Lucky Strike Común 20",
+    "photo": "lucky-strike-comun-20.jpg",
+    "price": 180
+  },
+  {
+    "name": "Lucky Strike Común Convertible 20",
+    "photo": "lucky-convertible-20.jpg",
+    "price": 180
+  },
+  {
+    "name": "Lucky Strike Box 20",
+    "photo": "lucky-strike-box.jpg",
+    "price": 190
+  },
+  {
+    "name": "Lucky Strike Box Convertible 20",
+    "photo": "lucky-convertible-20.jpg",
+    "price": 190
+  },
+  {
+    "name": "Lucky Strike Box 12",
+    "photo": "lucky-12.jpg",
+    "price": 110
+  },
+  {
+    "name": "Lucky Strike Box Convertible 12",
+    "photo": "lucky-conver-12.jpg",
+    "price": 110
+  },
+  {
+    "name": "Lucky Strike Pall Mall",
+    "photo": "lucky-strike-pallmall.jpeg",
+    "price": 170
+  }
+]
+ 
